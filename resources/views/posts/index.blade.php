@@ -18,15 +18,15 @@
                         <a href="{{ route('posts.create') }}" class="btn btn-md btn-success mb-3">TAMBAH POST</a>
                         <table class="table table-bordered">
                             <thead>
-                              <tr>
+                            <tr>
                                 <th scope="col">GAMBAR</th>
                                 <th scope="col">JUDUL</th>
                                 <th scope="col">CONTENT</th>
                                 <th scope="col">AKSI</th>
-                              </tr>
+                            </tr>
                             </thead>
                             <tbody>
-                              @forelse ($posts as $post)
+                            @forelse ($posts as $post)
                                 <tr>
                                     <td class="text-center">
                                         <img src="{{ Storage::url('public/posts/').$post->image }}" class="rounded" style="width: 150px">
@@ -42,14 +42,14 @@
                                         </form>
                                     </td>
                                 </tr>
-                              @empty
-                                  <div class="alert alert-danger">
-                                      Data Post belum Tersedia.
-                                  </div>
-                              @endforelse
+                            @empty
+                                <div class="alert alert-danger">
+                                    Data Post belum Tersedia.
+                                </div>
+                            @endforelse
                             </tbody>
-                          </table>  
-                          {{ $posts->links() }}
+                        </table>  
+                        {{ $posts->links() }}
                     </div>
                 </div>
             </div>
